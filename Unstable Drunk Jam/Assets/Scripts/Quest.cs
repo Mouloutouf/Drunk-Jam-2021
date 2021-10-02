@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public enum QuestType
@@ -20,9 +21,15 @@ public abstract class Quest : MonoBehaviour
     [HideInInspector]
     public float currentTime;
 
+    [TextArea]
+    public string description;
+
+    public TextMeshProUGUI text;
+
     public void StartQuest()
     {
         currentTime = completionTime;
+        text.text = description;
     }
 
     public abstract bool Completion();
