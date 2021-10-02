@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SprintMovement : MonoBehaviour
 {
-    ThirdPersonMovement movement;
+    public ThirdPersonMovement movement;
 
+    [HideInInspector]
     public bool sprinting;
 
     public float sprintSpeed;
@@ -14,11 +15,14 @@ public class SprintMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            Debug.Log("yes");
             sprinting = true;
+            movement.SetSpeed(sprintSpeed);
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             sprinting = false;
+            movement.SetSpeed(movement.speed);
         }
     }
 }
