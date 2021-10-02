@@ -8,8 +8,18 @@ public class CrowdManager : MonoBehaviour
     public int victimeNumber = 10;
     public float respawnSpeed = 2.0f;
     public float maxSpawnRadius = 10.0f;
-    public List<Victime> victimeList = new List<Victime>();
+    public List<GameObject> victimeList = new List<GameObject>();
     public GameObject victimePrefab;
+
+    [Header("Victime Behavior")]
+    public float victimPathPrecision = 5.0f;
+    public int victimPathMaxRange = 50;
+
+    public Vector2 minMaxSpeed;
+    public bool speedChangeOnDestination = true;
+    public bool speedVariation = true;
+
+    public float stopMaxTime = 5.0f;
 
     void Start()
     {
@@ -26,22 +36,15 @@ public class CrowdManager : MonoBehaviour
     {
         for (int i = 0; i < victimeNumber; i++)
         {
-            Vector3 rngPosition = NavMeshRandomPosition(maxSpawnRadius);
-            Instantiate(victimePrefab, rngPosition, Quaternion.identity);
+            Vector3 rngPosition = GetRandomPosition.NavMeshRandomPosition(maxSpawnRadius,30);
+            victimeList.Add(Instantiate(victimePrefab, rngPosition, Quaternion.identity));
+            victimePrefab.GetComponent<Victime>().SetupVictim(
+                victimPathPrecision,
+                victimPathMaxRange,
+                stopMaxTime,
+                minMaxSpeed,
+                speedChangeOnDestination,
+                speedVariation);
         }
-    }
-
-    Vector3 NavMeshRandomPosition(float range)
-    {
-        for (int i = 0; i < 30; i++)
-        {
-            Vector3 randomPoint = Random.insideUnitSphere * range;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
-            {
-                return hit.position;
-            }
-        }
-        return Vector3.zero;
     }
 }
