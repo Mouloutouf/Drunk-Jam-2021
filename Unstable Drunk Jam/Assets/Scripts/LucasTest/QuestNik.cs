@@ -7,8 +7,8 @@ public class QuestNik : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TextMeshProUGUI questText = default;
-    [SerializeField] private GameObject questBox = default;
-    [SerializeField] private Transform[] questPoints = default;
+    //[SerializeField] private GameObject questBox = default;
+    //[SerializeField] private Transform[] questPoints = default;
 
     [Header("Variables")]
     [SerializeField] private float secondsPerQuest = 5;

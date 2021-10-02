@@ -496,7 +496,7 @@ Rigidbody:
   m_GameObject: {fileID: 184615042}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2.25
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -679,7 +679,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257564027}
-  m_LocalRotation: {x: 0.22313076, y: 0.000000008386292, z: -0.0000000019196362, w: 0.97478855}
+  m_LocalRotation: {x: 0.22313076, y: -0.000000008386292, z: 0.0000000019196362, w: 0.97478855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1129,6 +1129,113 @@ Transform:
   m_Father: {fileID: 1402639473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &632308870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632308871}
+  - component: {fileID: 632308873}
+  - component: {fileID: 632308872}
+  m_Layer: 0
+  m_Name: Move To Inverted Keys Quest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &632308871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632308870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1227681213}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632308872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632308870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566b5b58a7be31c4d9c3179536ed039b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invertedUpMove: 115
+  invertedDownMove: 122
+  invertedRightMove: 113
+  invertedLeftMove: 100
+--- !u!114 &632308873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632308870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32ef25a932707f4b96564ca8c65c4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completed: 0
+  completionTime: 4
+  currentTime: 0
+  description: 'Go to the Blue Pylon as fast as possible !
+
+    Oh, and the keys
+    are inverted, sorry, haha.'
+  text: {fileID: 2129256501}
+  onStartQuest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 632308872}
+        m_TargetAssemblyTypeName: InvertKeys, Assembly-CSharp
+        m_MethodName: InvertMoveKeys
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onWinQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoseQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndQuest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 632308872}
+        m_TargetAssemblyTypeName: InvertKeys, Assembly-CSharp
+        m_MethodName: InvertBackMoveKeys
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destination: {fileID: 1781694824}
+  player: {fileID: 184615043}
+  radius: 0.5
 --- !u!1 &653868767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1486,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &746602832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3709771865978354039, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+  m_PrefabInstance: {fileID: 3709771865912517174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400b46349cd57074e9439831f13fec56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789625018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +2032,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &953579766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3709771865849610625, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+  m_PrefabInstance: {fileID: 3709771865912517174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32ef25a932707f4b96564ca8c65c4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &963194225
@@ -2926,6 +3055,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441126098}
   m_CullTransparentMesh: 1
+--- !u!1 &1474130453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474130455}
+  - component: {fileID: 1474130454}
+  m_Layer: 0
+  m_Name: Input Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1474130454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474130453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30fc85bcf4cd030409293c81ffc4afee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upMove: 122
+  downMove: 115
+  rightMove: 100
+  leftMove: 113
+  currentUpMove: 0
+  currentDownMove: 0
+  currentRightMove: 0
+  currentLeftMove: 0
+  sprint: 304
+--- !u!4 &1474130455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474130453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1560936979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3752,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812262897}
   m_CullTransparentMesh: 1
+--- !u!114 &1834895920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3709771866490421645, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+  m_PrefabInstance: {fileID: 3709771865912517174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae03c226c8b68e41ba5eae031ba2063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1835498821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +3950,26 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1085023872}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: allQuests.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: allQuests.Array.data[0]
+      value: 
+      objectReference: {fileID: 632308873}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: allQuests.Array.data[1]
+      value: 
+      objectReference: {fileID: 746602832}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: allQuests.Array.data[2]
+      value: 
+      objectReference: {fileID: 953579766}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: allQuests.Array.data[3]
+      value: 
+      objectReference: {fileID: 1834895920}
     - target: {fileID: 3709771864685989771, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3851,6 +4063,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 4917777276135985082, guid: d543dff1444cb9e449baf90bb7bf8e42, type: 3}
+      propertyPath: smoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4917777276135985082, guid: d543dff1444cb9e449baf90bb7bf8e42, type: 3}
       propertyPath: cameraTransform
       value: 
