@@ -15,12 +15,13 @@ Shader "Unlit/DoubleFace"
         {
             CGPROGRAM
             #pragma vertex vert
-            #pragma fragment frag
-            // make fog work
             #pragma multi_compile_fog
+            #pragma fragment frag
+            #pragma multi_compile_fwdadd_fullshadows
 
             #include "UnityCG.cginc"
             #include "Lighting.cginc"
+            #include "UnityPBSLighting.cginc"
             #include "AutoLight.cginc"
 
             struct appdata
@@ -55,7 +56,7 @@ Shader "Unlit/DoubleFace"
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv) * _Color;
                 fixed shadow = SHADOW_ATTENUATION(i);
-                col.rgb *= shadow * _LightColor0.rgb;
+                col.rgb = shadow * _LightColor0.rgb;
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
