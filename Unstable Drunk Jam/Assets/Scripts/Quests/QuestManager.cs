@@ -29,9 +29,12 @@ public class QuestManager : MonoBehaviour
     public string patchVersion;
     public TextMeshProUGUI patchText;
 
+    private Quest previousQuest;
+
     void Start()
     {
-        CreateQuestSequence();
+        currentQuest = SelectRandomQuest();
+        currentQuest.StartQuest();
     }
 
     void Update()
@@ -52,23 +55,23 @@ public class QuestManager : MonoBehaviour
             failedQuests++;
             NextQuest();
         }
-        timerText.text = timeLeftString + " " + currentQuest.currentTime.ToString("F2");
+        if (timerText != null) timerText.text = timeLeftString + " " + currentQuest.currentTime.ToString("F2");
     }
 
-    void CreateQuestSequence()
+    Quest SelectRandomQuest()
     {
-        //quests = new List<Quest>(loseQuestsAmount);
-
-        // Random Select quests from the quests templates
-        // Then generate quests with the different values of the quest template
-        quests = allQuests;
-
-        currentQuest = quests[0];
-        currentQuest.StartQuest();
+        foreach (var q in allQuests)
+        {
+            if (q == previousQuest) continue;
+            quests.Add(q);
+        }
+        int i = Random.Range(0, quests.Count);
+        return quests[i];
     }
+
     void NextQuest()
     {
-        patchText.text = patchVersion + (succeededQuests + failedQuests).ToString();
+        if (patchText != null) patchText.text = patchVersion + (succeededQuests + failedQuests).ToString();
 
         if (succeededQuests >= winQuestsAmount)
         {
@@ -83,17 +86,11 @@ public class QuestManager : MonoBehaviour
             loseBox.SetActive(true);
         }
 
+        previousQuest = currentQuest;
+
         currentQuest.EndQuest();
 
-        /*currentIndex++;
-        if (currentIndex >= quests.Count) {
-            currentIndex = 0;
-        }
-        */
-
-        currentIndex = Random.Range(0, quests.Count);
-
-        currentQuest = quests[currentIndex];
+        currentQuest = SelectRandomQuest();
         currentQuest.StartQuest();
     }
 }

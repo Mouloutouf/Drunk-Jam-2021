@@ -7,7 +7,7 @@ public class DialogueInteraction : Interaction
     public override void Interact()
     {
         Debug.Log("You're talking to me ?");
-        dialogueBox.SetActive(true);
+        //dialogueBox.SetActive(true);
 
         base.Interact();
     }

@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class ChineseInteractQuest : Quest
+public class InteractQuest : Quest
 {
     public int interactionAmount;
 
     public DialogueInteraction interaction;
 
+    public bool hasDialogue;
     [TextArea]
     public string dialogueString;
     public TextMeshProUGUI dialogueText;
