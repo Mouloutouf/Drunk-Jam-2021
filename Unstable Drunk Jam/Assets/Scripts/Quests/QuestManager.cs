@@ -9,6 +9,8 @@ public class QuestManager : MonoBehaviour
     private bool winState, loseState;
     private int succeededQuests, failedQuests;
 
+    public GameObject winBox, loseBox;
+
     //public Dictionary<Quest, QuestBehaviour> questsBehaviours;
 
     //public List<QuestTemplate> questsTemplates;
@@ -64,11 +66,13 @@ public class QuestManager : MonoBehaviour
         {
             winState = true;
             Debug.Log("You Win!");
+            winBox.SetActive(true);
         }
         if (failedQuests >= loseQuestsAmount)
         {
             loseState = true;
             Debug.Log("You Lose!");
+            loseBox.SetActive(true);
         }
 
         currentIndex++;

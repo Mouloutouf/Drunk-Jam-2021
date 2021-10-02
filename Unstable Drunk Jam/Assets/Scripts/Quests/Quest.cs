@@ -26,7 +26,7 @@ public abstract class Quest : MonoBehaviour
 
     public TextMeshProUGUI text;
 
-    public void StartQuest()
+    public virtual void StartQuest()
     {
         currentTime = completionTime;
         text.text = description;
