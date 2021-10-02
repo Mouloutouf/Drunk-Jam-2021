@@ -753,7 +753,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257564027}
-  m_LocalRotation: {x: 0.22313076, y: 0.000000008386292, z: -0.0000000019196362, w: 0.97478855}
+  m_LocalRotation: {x: 0.22313076, y: -0.000000008386292, z: 0.0000000019196362, w: 0.97478855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -827,7 +827,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352226552}
-  m_LocalRotation: {x: 0.25839263, y: 0.0000000083110265, z: -0.0000000022230011, w: 0.96604}
+  m_LocalRotation: {x: 0.25839263, y: -0.0000000083110265, z: 0.0000000022230011, w: 0.96604}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1742,7 +1742,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2443076, y: 0.000000003071771, z: 0.0000000014122234, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.000000014128465, z: -0.0000000056234195, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -13.632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1970,7 +1970,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063886590}
-  m_LocalRotation: {x: 0.24077812, y: -0.0000000038365244, z: 9.517516e-10, w: 0.9705802}
+  m_LocalRotation: {x: 0.24077812, y: 0.000000025342338, z: -0.0000000062868377, w: 0.9705802}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2012,8 +2012,6 @@ MonoBehaviour:
   winBox: {fileID: 653868767}
   loseBox: {fileID: 1441126098}
   allQuests:
-  - {fileID: 213935031}
-  - {fileID: 580019131}
   - {fileID: 1926490195}
   timeLeftString: 'New patch in:'
   timerText: {fileID: 1752893038}
@@ -3314,8 +3312,8 @@ MonoBehaviour:
   cursor: {fileID: 1430000900}
   canvas: {fileID: 1560936983}
   timeMinMax:
+  - 0.5
   - 1
-  - 2
   spawnMinMax:
   - 1280
   - 720
@@ -3337,7 +3335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 5
+  completionTime: 7.5
   currentTime: 0
   description: The game is now F2P, go to destination!
   text: {fileID: 2129256501}
