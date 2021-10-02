@@ -1,49 +1,9 @@
 fileFormatVersion: 2
-guid: 0b21f393406c9a54dad50a6d9661a8a4
+guid: b4ff777e775b3c44ba630c87c8c65134
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Can_01
-    second: {fileID: 2100000, guid: 2d4860c123cc5bb4988e013718949fb6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Can_02
-    second: {fileID: 2100000, guid: 2da12085c56f8ff4ab1f4fe550c55fa9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Can_03
-    second: {fileID: 2100000, guid: 1cfdc7c2c71b8534f9599ced5b3a0e09, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Can_Top
-    second: {fileID: 2100000, guid: a1ad5544178478a4ca5c523f60fafb16, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Distrib_Back
-    second: {fileID: 2100000, guid: 57e549e5ce01b8340becdbd554fe7325, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Distrib_Bot
-    second: {fileID: 2100000, guid: b119078d7c7e9d94db17c131b666af46, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Distrib_Glass
-    second: {fileID: 2100000, guid: 1cf99e85affab2242b9bf9ec403a9117, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Distrib_Main
-    second: {fileID: 2100000, guid: 031c73fa37c2f5b4fb2fdbfc56308610, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -74,7 +34,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.4
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -125,7 +85,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.4
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
