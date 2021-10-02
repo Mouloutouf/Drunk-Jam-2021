@@ -37,12 +37,14 @@ public class QuestManager : MonoBehaviour
         if (currentQuest.Completion())
         {
             Debug.Log("Quest completed!");
+            currentQuest.onWinQuest.Invoke();
             succeededQuests++;
             NextQuest();
         }
         if (currentQuest.TimeOut())
         {
             Debug.Log("Quest failed!");
+            currentQuest.onLoseQuest.Invoke();
             failedQuests++;
             NextQuest();
         }
@@ -74,6 +76,8 @@ public class QuestManager : MonoBehaviour
             Debug.Log("You Lose!");
             loseBox.SetActive(true);
         }
+
+        currentQuest.EndQuest();
 
         currentIndex++;
         if (currentIndex >= quests.Count) {

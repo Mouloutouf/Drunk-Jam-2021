@@ -34,12 +34,12 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, target, 0f) * Vector3.forward;
-            characterController.Move(moveDir.normalized * speed * Time.deltaTime);
+            characterController.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
         }
     }
 
-    void SetSpeed()
+    public void SetSpeed(float _value)
     {
-
+        currentSpeed = _value;
     }
 }
