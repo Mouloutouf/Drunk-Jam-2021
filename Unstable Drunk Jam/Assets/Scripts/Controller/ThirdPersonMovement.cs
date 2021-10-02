@@ -22,8 +22,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = InputManager.instance.GetHorizontalMotion();
+        float vertical = InputManager.instance.GetVerticalMotion();
 
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
 
