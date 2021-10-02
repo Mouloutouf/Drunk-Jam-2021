@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CharaColor03
-  m_Shader: {fileID: 4800000, guid: 10a29a4df3227034fa95f4c7484b1414, type: 3}
+  m_Name: CharaColor02
+  m_Shader: {fileID: 4800000, guid: 8c9d8928a4b21cd4f8bcb444db85d8a1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -25,5 +25,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _Color: {r: 1, g: 0.7464832, b: 0.3726415, a: 1}
+    - _Color: {r: 1, g: 0.8712054, b: 0.5330188, a: 1}
   m_BuildTextureStacks: []
