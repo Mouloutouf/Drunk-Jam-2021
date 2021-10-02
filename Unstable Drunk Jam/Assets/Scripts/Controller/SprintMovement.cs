@@ -13,13 +13,13 @@ public class SprintMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (InputManager.instance.GetSprintInputDown())
         {
             Debug.Log("yes");
             sprinting = true;
             movement.SetSpeed(sprintSpeed);
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (InputManager.instance.GetSprintInputUp())
         {
             sprinting = false;
             movement.SetSpeed(movement.speed);
