@@ -13,7 +13,6 @@ public class CollisionCheck : MonoBehaviour
     {
         colliding = true;
         collisionCount++;
-        Debug.Log("Collision");
     }
     private void OnCollisionExit(Collision collision)
     {

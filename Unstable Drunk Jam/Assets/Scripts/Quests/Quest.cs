@@ -3,18 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum QuestType
-{
-    TalkToCharacter,
-    KillCharacters,
-    HitWalls,
-    DeliverObject
-}
-
 public abstract class Quest : MonoBehaviour
 {
-    public QuestType questType;
-
+    [HideInInspector]
     public bool completed;
 
     public float completionTime;
@@ -42,4 +33,6 @@ public abstract class Quest : MonoBehaviour
         currentTime -= Time.deltaTime;
         return false;
     }
+
+    public virtual void EndQuest() { }
 }

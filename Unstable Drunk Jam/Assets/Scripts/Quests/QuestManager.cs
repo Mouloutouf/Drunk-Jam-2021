@@ -75,6 +75,8 @@ public class QuestManager : MonoBehaviour
             loseBox.SetActive(true);
         }
 
+        currentQuest.EndQuest();
+
         currentIndex++;
         if (currentIndex >= quests.Count) {
             currentIndex = 0;
