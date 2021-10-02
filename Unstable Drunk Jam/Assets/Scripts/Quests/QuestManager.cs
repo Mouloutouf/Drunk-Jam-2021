@@ -37,12 +37,14 @@ public class QuestManager : MonoBehaviour
         if (currentQuest.Completion())
         {
             Debug.Log("Quest completed!");
+            currentQuest.onWinQuest.Invoke();
             succeededQuests++;
             NextQuest();
         }
         if (currentQuest.TimeOut())
         {
             Debug.Log("Quest failed!");
+            currentQuest.onLoseQuest.Invoke();
             failedQuests++;
             NextQuest();
         }

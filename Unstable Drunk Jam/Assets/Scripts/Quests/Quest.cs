@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Quest : MonoBehaviour
 {
@@ -17,10 +18,16 @@ public abstract class Quest : MonoBehaviour
 
     public TextMeshProUGUI text;
 
+    public UnityEvent onStartQuest;
+    public UnityEvent onWinQuest;
+    public UnityEvent onLoseQuest;
+
     public virtual void StartQuest()
     {
         currentTime = completionTime;
         text.text = description;
+
+        onStartQuest.Invoke();
     }
 
     public abstract bool Completion();
