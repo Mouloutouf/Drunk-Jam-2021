@@ -67,9 +67,7 @@ public class Victime : MonoBehaviour
         if (speedChangeOnDestination)
         {
             agent.speed = Random.Range(minMaxSpeed.x, minMaxSpeed.y);
-            Debug.Log("agent.speed ");
         }
-        Debug.Log("minMaxSpeed " + minMaxSpeed + " || speedChangeOnDestination " + speedChangeOnDestination);
     }
 
     IEnumerator Wait(float stopMT)
