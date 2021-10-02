@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Distrib_Main
-  m_Shader: {fileID: 4800000, guid: fea00f2a7285bd5419a5623caedabc9e, type: 3}
+  m_Name: M_Glass
+  m_Shader: {fileID: 4800000, guid: 10a29a4df3227034fa95f4c7484b1414, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -73,6 +73,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+    - _Color: {r: 0.82452834, g: 0.97865885, b: 1, a: 0.5803922}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
