@@ -70,6 +70,7 @@
 
                 float shadow = step(0.5, SHADOW_ATTENUATION(i));
                 shadow *= NdotL;
+                shadow = (1 - (1 - shadow) * .2);
 
                 float3 diffuse = shadow * _LightColor0;
                 diffuse += ShadeSH9(half4(normal, 1));

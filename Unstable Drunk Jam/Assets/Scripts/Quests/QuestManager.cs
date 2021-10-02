@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestManager : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class QuestManager : MonoBehaviour
     private int currentIndex;
 
     public string timeLeftString;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
+
+    public string patchVersion;
+    public TextMeshProUGUI patchText;
 
     void Start()
     {
@@ -64,6 +68,8 @@ public class QuestManager : MonoBehaviour
     }
     void NextQuest()
     {
+        patchText.text = patchVersion + (succeededQuests + failedQuests).ToString();
+
         if (succeededQuests >= winQuestsAmount)
         {
             winState = true;
@@ -79,10 +85,14 @@ public class QuestManager : MonoBehaviour
 
         currentQuest.EndQuest();
 
-        currentIndex++;
+        /*currentIndex++;
         if (currentIndex >= quests.Count) {
             currentIndex = 0;
         }
+        */
+
+        currentIndex = Random.Range(0, quests.Count);
+
         currentQuest = quests[currentIndex];
         currentQuest.StartQuest();
     }
