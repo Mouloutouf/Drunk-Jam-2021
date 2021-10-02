@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestManager : MonoBehaviour
 {
     public int winQuestsAmount, loseQuestsAmount;
     private bool winState, loseState;
     private int succeededQuests, failedQuests;
+
+    public GameObject winBox, loseBox;
 
     //public Dictionary<Quest, QuestBehaviour> questsBehaviours;
 
@@ -21,7 +24,10 @@ public class QuestManager : MonoBehaviour
     private int currentIndex;
 
     public string timeLeftString;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
+
+    public string patchVersion;
+    public TextMeshProUGUI patchText;
 
     void Start()
     {
@@ -35,12 +41,14 @@ public class QuestManager : MonoBehaviour
         if (currentQuest.Completion())
         {
             Debug.Log("Quest completed!");
+            currentQuest.onWinQuest.Invoke();
             succeededQuests++;
             NextQuest();
         }
         if (currentQuest.TimeOut())
         {
             Debug.Log("Quest failed!");
+            currentQuest.onLoseQuest.Invoke();
             failedQuests++;
             NextQuest();
         }
@@ -60,21 +68,31 @@ public class QuestManager : MonoBehaviour
     }
     void NextQuest()
     {
+        patchText.text = patchVersion + (succeededQuests + failedQuests).ToString();
+
         if (succeededQuests >= winQuestsAmount)
         {
             winState = true;
             Debug.Log("You Win!");
+            winBox.SetActive(true);
         }
         if (failedQuests >= loseQuestsAmount)
         {
             loseState = true;
             Debug.Log("You Lose!");
+            loseBox.SetActive(true);
         }
 
-        currentIndex++;
+        currentQuest.EndQuest();
+
+        /*currentIndex++;
         if (currentIndex >= quests.Count) {
             currentIndex = 0;
         }
+        */
+
+        currentIndex = Random.Range(0, quests.Count);
+
         currentQuest = quests[currentIndex];
         currentQuest.StartQuest();
     }
