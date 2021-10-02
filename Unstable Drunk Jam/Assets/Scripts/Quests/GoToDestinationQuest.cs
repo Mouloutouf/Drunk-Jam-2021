@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GoToDestination : Quest
+public class GoToDestinationQuest : Quest
 {
     public Transform destination;
 
