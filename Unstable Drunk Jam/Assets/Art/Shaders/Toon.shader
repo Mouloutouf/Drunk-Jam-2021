@@ -71,7 +71,8 @@
                 float shadow = step(0.5, SHADOW_ATTENUATION(i));
                 shadow *= NdotL;
 
-				float3 diffuse = shadow * _LightColor0 + ShadeSH9(half4(normal, 1));
+                float3 diffuse = shadow * _LightColor0;
+                diffuse += ShadeSH9(half4(normal, 1));
                 fixed4 col = tex2D(_MainTex, i.uv);
 				//return fixed4(ShadeSH9(half4(normal, 1)), 1);
 
