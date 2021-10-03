@@ -37,7 +37,18 @@ public abstract class Quest : MonoBehaviour
         currentTime = completionTime;
         text.text = description;
 
+        StartPopup();
+
         onStartQuest.Invoke();
+    }
+
+    IEnumerator StartPopup()
+    {
+
+
+        yield return new WaitForSeconds(1.0f);
+
+
     }
 
     public abstract bool Completion();
