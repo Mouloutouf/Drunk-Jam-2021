@@ -70,8 +70,8 @@ MonoBehaviour:
   minMaxSpeed: {x: 0.5, y: 10}
   speedChangeOnDestination: 1
   speedVariation: 1
-  death_FX: {fileID: 0}
-  damage_FX: {fileID: 0}
+  death_FX: {fileID: 4877767505363672323, guid: b894b6a7fe6df674594c953be384170c, type: 3}
+  damage_FX: {fileID: 4877767505363672323, guid: df6c25992eff09d408dca97fe50ae850, type: 3}
   spawn_FX: {fileID: 0}
   animator: {fileID: 8530502673684100651}
 --- !u!195 &2104033358747929958
