@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 632308873}
   - component: {fileID: 632308872}
   m_Layer: 0
-  m_Name: Move To Inverted Keys Quest
+  m_Name: Move To Inverted Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 1907963318}
   - component: {fileID: 1907963317}
   m_Layer: 0
-  m_Name: Interact NPC Stole Cam Quest
+  m_Name: NPC Camera Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 3709771865849610638}
   - component: {fileID: 3709771865849610625}
   m_Layer: 0
-  m_Name: Go To Quest
+  m_Name: Move To Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
