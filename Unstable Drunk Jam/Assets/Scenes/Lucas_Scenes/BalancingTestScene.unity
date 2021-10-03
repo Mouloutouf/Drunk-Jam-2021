@@ -431,6 +431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colliding: 0
   collisionCount: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &198606694
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +561,7 @@ MonoBehaviour:
   onEndQuest:
     m_PersistentCalls:
       m_Calls: []
-  destination: {fileID: 1781694824}
+  destinations: []
   player: {fileID: 184615043}
   radius: 0.5
 --- !u!4 &213935032
@@ -715,7 +718,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352226552}
-  m_LocalRotation: {x: 0.25839263, y: -0.0000000083110265, z: 0.0000000022230011, w: 0.96604}
+  m_LocalRotation: {x: 0.25839263, y: 0.0000000083110265, z: -0.0000000022230011, w: 0.96604}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -817,6 +820,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   collisionAmount: 6
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   collisionCheck: {fileID: 184615047}
 --- !u!1001 &649820543
 PrefabInstance:
@@ -1522,7 +1528,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2443076, y: 0.000000014128465, z: -0.0000000056234195, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.000000003071771, z: 0.0000000014122234, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -13.632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1673,7 +1679,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063886590}
-  m_LocalRotation: {x: 0.24077812, y: 0.000000025342338, z: -0.0000000062868377, w: 0.9705802}
+  m_LocalRotation: {x: 0.24077812, y: -0.0000000038365244, z: 9.517516e-10, w: 0.9705802}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1714,8 +1720,8 @@ MonoBehaviour:
   loseQuestsAmount: 5
   winBox: {fileID: 653868767}
   loseBox: {fileID: 1441126098}
-  allQuests:
-  - {fileID: 1926490195}
+  useSelectedQuests: 1
+  selectedQuests:
   - {fileID: 1299843659}
   timeLeftString: 'New patch in:'
   timerText: {fileID: 1752893038}
@@ -1872,7 +1878,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  destination: {fileID: 1781694824}
+  destinations: []
   player: {fileID: 184615043}
   radius: 0.5
 --- !u!1 &1402639472
@@ -2457,7 +2463,7 @@ MonoBehaviour:
   onEndQuest:
     m_PersistentCalls:
       m_Calls: []
-  destination: {fileID: 1781694824}
+  destinations: []
   player: {fileID: 184615043}
   radius: 0.5
 --- !u!114 &2129256501 stripped
