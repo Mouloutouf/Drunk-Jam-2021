@@ -43,6 +43,7 @@ public class InteractionArea : MonoBehaviour
 
         if (canInteract)
         {
+            Debug.Log("u");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 interaction.Interact();

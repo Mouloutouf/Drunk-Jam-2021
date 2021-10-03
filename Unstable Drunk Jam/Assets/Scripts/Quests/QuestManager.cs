@@ -12,13 +12,9 @@ public class QuestManager : MonoBehaviour
 
     public GameObject winBox, loseBox;
 
-    //public Dictionary<Quest, QuestBehaviour> questsBehaviours;
-
-    //public List<QuestTemplate> questsTemplates;
-
     public List<Quest> allQuests;
 
-    private List<Quest> quests;
+    private List<Quest> quests = new List<Quest>();
     private Quest currentQuest;
 
     private int currentIndex;

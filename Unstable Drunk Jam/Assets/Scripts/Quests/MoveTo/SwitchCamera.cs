@@ -11,15 +11,18 @@ public class SwitchCamera : MonoBehaviour
 
     public Transform player;
 
+    [HideInInspector]
+    public GameObject victim;
+
     public void SwitchCam()
     {
         int npc = Random.Range(0, crowdManager.victimeList.Count);
-        GameObject victime = crowdManager.victimeList[npc];
+        victim = crowdManager.victimeList[npc];
 
-        cinemachineFreeLook.Follow = victime.transform;
+        cinemachineFreeLook.LookAt = victim.transform;
     }
     public void SwitchBackCam()
     {
-        cinemachineFreeLook.Follow = player;
+        cinemachineFreeLook.LookAt = player;
     }
 }

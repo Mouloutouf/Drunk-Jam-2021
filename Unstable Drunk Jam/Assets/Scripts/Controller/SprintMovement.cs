@@ -15,7 +15,6 @@ public class SprintMovement : MonoBehaviour
     {
         if (InputManager.instance.GetSprintInputDown())
         {
-            Debug.Log("yes");
             sprinting = true;
             movement.SetSpeed(sprintSpeed);
         }
