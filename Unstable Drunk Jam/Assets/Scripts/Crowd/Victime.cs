@@ -26,6 +26,12 @@ public class Victime : MonoBehaviour
     public GameObject damage_FX;
     public GameObject spawn_FX;
 
+    [Header("ANIMATION")]
+    public Animator animator;
+    Vector3 currentLocation;
+    Vector3 baseLocation;
+    float velocity;
+
     // GETTERS & SETTERS
     public void SetupVictim(float pathP, int maxRange, float stopT, Vector2 mmSpeed, bool speedChange, bool speedV)
     {
@@ -48,12 +54,15 @@ public class Victime : MonoBehaviour
         if (speedVariation) agent.speed = Random.Range(minMaxSpeed.x, minMaxSpeed.y);
 
         SelectNewDestination();
+
+        baseLocation = currentLocation = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckDistance();
+        GetVelocity();
     }
 
     void CheckDistance()
@@ -62,6 +71,20 @@ public class Victime : MonoBehaviour
         {
             StartCoroutine(Wait(stopMaxTime));
         }
+    }
+
+    void GetVelocity()
+    {
+        currentLocation = transform.position;
+        velocity = Vector3.Distance(baseLocation, currentLocation);
+        baseLocation = currentLocation;
+
+        if (animator != null)
+        {
+            animator.SetFloat("RunSpeed", velocity * 10);
+        }
+
+        Debug.LogWarning("velocity = " + velocity);
     }
 
     void SelectNewDestination()

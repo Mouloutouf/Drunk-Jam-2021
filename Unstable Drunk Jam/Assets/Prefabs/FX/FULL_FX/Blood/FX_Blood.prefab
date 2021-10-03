@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877767505363672323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5645936373204958138}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addd1873c5b043e479e5c2ca3fbf0009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.5
+  timer: 10
 --- !u!1001 &3117529790239703852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +127,22 @@ PrefabInstance:
     - target: {fileID: 6113659944191366165, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
       propertyPath: m_Name
       value: PS_Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113659944191366167, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113659944191366167, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113659944191366167, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113659944191366167, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6113659944191366168, guid: 64c51fe886866304d9a0986d864ca014, type: 3}
       propertyPath: m_RootOrder
