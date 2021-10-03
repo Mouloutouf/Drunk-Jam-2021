@@ -28,6 +28,9 @@ public abstract class Quest : MonoBehaviour
 
     public PatchPopup patchPopup;
 
+    [HideInInspector]
+    public bool active;
+
     private void OnEnable()
     {
         QuestManager.allQuests.Add(this);
@@ -42,19 +45,21 @@ public abstract class Quest : MonoBehaviour
         currentTime = completionTime;
         text.text = description;
 
-        StartPopup();
-
-        onStartQuest.Invoke();
+        StartCoroutine(StartPopup());
     }
 
     IEnumerator StartPopup()
     {
         patchPopup.gameObject.SetActive(true);
-        //patchPopup.SetMissionPopup(questName, description, );
+        patchPopup.SetMissionPopup(questName, description, questSprite, questSprite);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
 
         patchPopup.gameObject.SetActive(false);
+
+        onStartQuest.Invoke();
+
+        active = true;
     }
 
     public abstract bool Completion();
@@ -70,6 +75,8 @@ public abstract class Quest : MonoBehaviour
 
     public virtual void EndQuest()
     {
+        active = false;
+
         onEndQuest.Invoke();
     }
 }

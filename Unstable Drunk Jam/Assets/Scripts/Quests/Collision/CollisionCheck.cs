@@ -42,6 +42,6 @@ public class CollisionCheck : MonoBehaviour
 
     void CollisionFX(Vector3 position)
     {
-        Instantiate(collision_FX, position, Quaternion.identity);
+        if (collision_FX != null) Instantiate(collision_FX, position, Quaternion.identity);
     }
 }

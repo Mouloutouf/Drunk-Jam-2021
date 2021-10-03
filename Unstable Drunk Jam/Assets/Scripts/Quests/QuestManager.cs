@@ -37,6 +37,8 @@ public class QuestManager : MonoBehaviour
 
     void Update()
     {
+        if (!currentQuest.active) return;
+
         if (winState || loseState) return;
 
         if (currentQuest.Completion())
