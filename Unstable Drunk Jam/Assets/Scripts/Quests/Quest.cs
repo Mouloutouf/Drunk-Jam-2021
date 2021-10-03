@@ -27,6 +27,7 @@ public abstract class Quest : MonoBehaviour
     public UnityEvent onEndQuest;
 
     public PatchPopup patchPopup;
+    public float popupTime;
 
     [HideInInspector]
     public bool active;
@@ -53,7 +54,7 @@ public abstract class Quest : MonoBehaviour
         patchPopup.gameObject.SetActive(true);
         patchPopup.SetMissionPopup(questName, description, questSprite, questSprite);
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(popupTime);
 
         patchPopup.gameObject.SetActive(false);
 
