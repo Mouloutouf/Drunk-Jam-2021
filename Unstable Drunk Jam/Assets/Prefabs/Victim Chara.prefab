@@ -70,6 +70,10 @@ MonoBehaviour:
   minMaxSpeed: {x: 0.5, y: 10}
   speedChangeOnDestination: 1
   speedVariation: 1
+  death_FX: {fileID: 0}
+  damage_FX: {fileID: 0}
+  spawn_FX: {fileID: 0}
+  animator: {fileID: 8530502673684100651}
 --- !u!195 &2104033358747929958
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -216,5 +220,10 @@ PrefabInstance:
 --- !u!4 &8530502673684100644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7028596797515608221, guid: a8c1fd51393e6294bb9e112149489c25, type: 3}
+  m_PrefabInstance: {fileID: 1722901118732224185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8530502673684100651 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7028596797515608210, guid: a8c1fd51393e6294bb9e112149489c25, type: 3}
   m_PrefabInstance: {fileID: 1722901118732224185}
   m_PrefabAsset: {fileID: 0}
