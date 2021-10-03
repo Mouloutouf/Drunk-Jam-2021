@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdsQuest : MonoBehaviour
 {
-    public CursorHide cursor;
+    //public CursorHide cursor;
 
     public Transform canvas;
 

@@ -7,7 +7,7 @@ public class GamekultQuest : MonoBehaviour
 {
     public Transform canvas;
     public ThirdPersonMovement player;
-    public CursorHide cursor;
+    //public CursorHide cursor;
 
     public GameObject articlePrefab;
 
