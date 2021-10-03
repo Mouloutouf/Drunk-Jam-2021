@@ -29,12 +29,12 @@ public class PatchPopup : MonoBehaviour
         versionText.color = Color.HSVToRGB(Random.Range(0f, 1f), 1f, 1f);
     }
 
-    public void SetMissionPopup(string missionName, string missionDescription, Image imageLeft, Image imageRight)
+    public void SetMissionPopup(string missionName, string missionDescription, Sprite imageLeft, Sprite imageRight)
     {
         missionDescText.text = missionName;
         missionDescText.text = missionDescription;
 
-        leftImage = imageLeft;
-        rightImage = imageRight;
+        leftImage.sprite = imageLeft;
+        rightImage.sprite = imageRight;
     }
 }
