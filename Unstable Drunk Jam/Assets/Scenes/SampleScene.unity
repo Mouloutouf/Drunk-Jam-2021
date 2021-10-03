@@ -684,7 +684,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257564027}
-  m_LocalRotation: {x: 0.22313076, y: 0.000000008386292, z: -0.0000000019196362, w: 0.97478855}
+  m_LocalRotation: {x: 0.22313076, y: -0.000000008386292, z: 0.0000000019196362, w: 0.97478855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2121,7 +2121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2443076, y: 0.000000014128465, z: -0.0000000056234195, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.000000003071771, z: 0.0000000014122234, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -13.632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2400,7 +2400,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063886590}
-  m_LocalRotation: {x: 0.24077812, y: 0.000000025342338, z: -0.0000000062868377, w: 0.9705802}
+  m_LocalRotation: {x: 0.24077812, y: -0.0000000038365244, z: 9.517516e-10, w: 0.9705802}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3829,6 +3829,7 @@ MonoBehaviour:
   crowdManager: {fileID: 2040643950}
   player: {fileID: 184615043}
   victim: {fileID: 0}
+  interactionArea: {fileID: 0}
 --- !u!114 &1907963318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3939,6 +3940,7 @@ MonoBehaviour:
   interactionAreaPrefab: {fileID: 2043076413941674489, guid: 616244fd137626a42bb8c6b9116afd37, type: 3}
   player: {fileID: 184615043}
   interactDisplay: {fileID: 1168547367}
+  interactionArea: {fileID: 0}
 --- !u!114 &1907963320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3951,6 +3953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77be494632d321f40848eaecec4a1cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactQuest: {fileID: 0}
   switchCamera: {fileID: 1907963317}
   addInteractible: {fileID: 1907963319}
 --- !u!4 &1953373388 stripped

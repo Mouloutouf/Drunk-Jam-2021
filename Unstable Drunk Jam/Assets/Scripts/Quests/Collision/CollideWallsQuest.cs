@@ -1,6 +1,9 @@
-﻿public class CollideWallsQuest : Quest
+﻿using UnityEngine;
+
+public class CollideWallsQuest : Quest
 {
     public int collisionAmount;
+    public LayerMask layerMask;
 
     public CollisionCheck collisionCheck;
 
@@ -9,6 +12,7 @@
         base.StartQuest();
 
         collisionCheck.collisionCount = 0;
+        collisionCheck.layerMask = layerMask;
     }
 
     public override bool Completion()
