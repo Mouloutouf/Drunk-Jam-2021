@@ -25,12 +25,14 @@ public class InteractionArea : MonoBehaviour
     {
         if (!active)
         {
+            Debug.Log("W");
             if (displayIsActive) interactDisplay.SetActive(false);
             return;
         }
 
         if (Vector3.Distance(interactiblePos, playerPos) <= range)
         {
+            Debug.Log("Y");
             canInteract = true;
             interactDisplay.SetActive(true);
             displayIsActive = true;
@@ -43,6 +45,7 @@ public class InteractionArea : MonoBehaviour
 
         if (canInteract)
         {
+            Debug.Log("U");
             if (Input.GetKeyDown(KeyCode.E))
             {
                 interaction.Interact();

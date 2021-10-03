@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class Interaction : MonoBehaviour
+public class Interaction : MonoBehaviour
 {
     [HideInInspector]
     public bool active;

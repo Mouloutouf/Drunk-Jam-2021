@@ -21,6 +21,7 @@ public abstract class Quest : MonoBehaviour
     public UnityEvent onStartQuest;
     public UnityEvent onWinQuest;
     public UnityEvent onLoseQuest;
+    public UnityEvent onEndQuest;
 
     public virtual void StartQuest()
     {
@@ -41,5 +42,8 @@ public abstract class Quest : MonoBehaviour
         return false;
     }
 
-    public virtual void EndQuest() { }
+    public virtual void EndQuest()
+    {
+        onEndQuest.Invoke();
+    }
 }
