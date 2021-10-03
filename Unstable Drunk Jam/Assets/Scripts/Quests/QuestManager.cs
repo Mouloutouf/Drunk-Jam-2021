@@ -33,6 +33,10 @@ public class QuestManager : MonoBehaviour
     public PatchPopup patchPopup;
     public float popupTime;
 
+	[Header("FX")]
+    public GameObject questFailed_FX;
+    public GameObject questValidated_FX;
+
     void Start()
     {
         currentQuest = SelectRandomQuest();
@@ -47,6 +51,7 @@ public class QuestManager : MonoBehaviour
 
         if (currentQuest.Completion())
         {
+            ValidatedFX();
             Debug.Log("Quest completed!");
             currentQuest.onWinQuest.Invoke();
             succeededQuests++;
@@ -54,6 +59,7 @@ public class QuestManager : MonoBehaviour
         }
         if (currentQuest.TimeOut())
         {
+            FailedFX();
             Debug.Log("Quest failed!");
             currentQuest.onLoseQuest.Invoke();
             failedQuests++;
@@ -88,7 +94,7 @@ public class QuestManager : MonoBehaviour
         if (patchText != null) patchText.text = patchVersion + (succeededQuests + failedQuests).ToString();
 
         if (succeededQuests >= winQuestsAmount)
-        {
+        {          
             winState = true;
             Debug.Log("You Win!");
             winBox.SetActive(true);
@@ -106,5 +112,17 @@ public class QuestManager : MonoBehaviour
 
         currentQuest = SelectRandomQuest();
         StartCurrentQuest();
+    }
+
+    //////FX
+    ///
+
+    void FailedFX()
+    {
+        if(questFailed_FX != null) Instantiate(questFailed_FX);
+    }
+    void ValidatedFX()
+    {
+        if (questValidated_FX != null) Instantiate(questValidated_FX);
     }
 }

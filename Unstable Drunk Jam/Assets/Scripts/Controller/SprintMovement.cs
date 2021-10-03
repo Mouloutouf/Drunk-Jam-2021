@@ -43,7 +43,5 @@ public class SprintMovement : MonoBehaviour
         {
             animator.SetFloat("RunSpeed", velocity * 10);
         }
-
-        Debug.LogWarning("velocity = " + velocity);
     }
 }
