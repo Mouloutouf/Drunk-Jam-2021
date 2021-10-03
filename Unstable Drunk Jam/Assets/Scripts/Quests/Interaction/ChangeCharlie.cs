@@ -16,6 +16,7 @@ public class ChangeCharlie : MonoBehaviour
         victim = crowdManager.victimeList[npc];
 
         victim.transform.GetChild(0).rotation = Quaternion.Euler(0, 0, 180);
+        victim.transform.GetChild(0).position += Vector3.up * 2;
 
         interactionArea.transform.SetParent(victim.transform);
         interactionArea.transform.localPosition = Vector3.zero;

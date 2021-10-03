@@ -9,10 +9,17 @@ public class CollisionCheck : MonoBehaviour
     [HideInInspector]
     public int collisionCount;
 
+    [HideInInspector]
+    public LayerMask layerMask;
+
     private void OnCollisionEnter(Collision collision)
     {
-        colliding = true;
-        collisionCount++;
+        if (layerMask == (layerMask | (1 << collision.gameObject.layer)))
+        {
+            Debug.Log("collision");
+            colliding = true;
+            collisionCount++;
+        }
     }
     private void OnCollisionExit(Collision collision)
     {
