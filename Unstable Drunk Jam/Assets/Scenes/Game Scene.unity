@@ -863,6 +863,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3222092480060843856, guid: fa59b1f763ce90b4ba7e49dff7e9e659, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222092480060843856, guid: fa59b1f763ce90b4ba7e49dff7e9e659, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1049,7 +1053,7 @@ MonoBehaviour:
   onCollisionExit:
     m_PersistentCalls:
       m_Calls: []
-  collision_FX: {fileID: 0}
+  collision_FX: {fileID: 4877767505363672323, guid: df6c25992eff09d408dca97fe50ae850, type: 3}
 --- !u!54 &401048209
 Rigidbody:
   m_ObjectHideFlags: 0
