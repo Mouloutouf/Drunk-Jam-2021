@@ -13,8 +13,11 @@ public abstract class Quest : MonoBehaviour
     [HideInInspector]
     public float currentTime;
 
+    public string questName;
     [TextArea]
     public string description;
+
+    public Sprite questSprite;
 
     public TextMeshProUGUI text;
 
@@ -22,6 +25,12 @@ public abstract class Quest : MonoBehaviour
     public UnityEvent onWinQuest;
     public UnityEvent onLoseQuest;
     public UnityEvent onEndQuest;
+
+    public PatchPopup patchPopup;
+    public float popupTime;
+
+    [HideInInspector]
+    public bool active;
 
     private void OnEnable()
     {
@@ -37,7 +46,21 @@ public abstract class Quest : MonoBehaviour
         currentTime = completionTime;
         text.text = description;
 
+        StartCoroutine(StartPopup());
+    }
+
+    IEnumerator StartPopup()
+    {
+        patchPopup.gameObject.SetActive(true);
+        patchPopup.SetMissionPopup(questName, description, questSprite, questSprite);
+
+        yield return new WaitForSeconds(popupTime);
+
+        patchPopup.gameObject.SetActive(false);
+
         onStartQuest.Invoke();
+
+        active = true;
     }
 
     public abstract bool Completion();
@@ -53,6 +76,8 @@ public abstract class Quest : MonoBehaviour
 
     public virtual void EndQuest()
     {
+        active = false;
+
         onEndQuest.Invoke();
     }
 }

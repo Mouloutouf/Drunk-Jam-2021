@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollisionCheck : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class CollisionCheck : MonoBehaviour
     [HideInInspector]
     public LayerMask layerMask;
 
+    public UnityEvent onCollisionEnter;
+    public UnityEvent onCollisionExit;
+
     [Header("FX")]
     public GameObject collision_FX;
 
@@ -19,19 +23,25 @@ public class CollisionCheck : MonoBehaviour
     {
         if (layerMask == (layerMask | (1 << collision.gameObject.layer)))
         {
-            CollisionFX(collision.transform.position);
+            var c = collision.GetContact(0);
+            CollisionFX(c.point);
+
             Debug.Log("collision");
             colliding = true;
             collisionCount++;
+
+            onCollisionEnter.Invoke();
         }
     }
     private void OnCollisionExit(Collision collision)
     {
         colliding = false;
+
+        onCollisionExit.Invoke();
     }
 
     void CollisionFX(Vector3 position)
     {
-        Instantiate(collision_FX, position, Quaternion.identity);
+        if (collision_FX != null) Instantiate(collision_FX, position, Quaternion.identity);
     }
 }
