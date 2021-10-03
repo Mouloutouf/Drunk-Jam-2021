@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addd1873c5b043e479e5c2ca3fbf0009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.5
+  timer: 5
 --- !u!1001 &829607183863410954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +193,14 @@ PrefabInstance:
     - target: {fileID: 7476211415424637700, guid: c26b2faa0852a0b449f816c524da943c, type: 3}
       propertyPath: m_Name
       value: PS_Collision
+      objectReference: {fileID: 0}
+    - target: {fileID: 7476211415424637702, guid: c26b2faa0852a0b449f816c524da943c, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7476211415424637702, guid: c26b2faa0852a0b449f816c524da943c, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7476211415424637705, guid: c26b2faa0852a0b449f816c524da943c, type: 3}
       propertyPath: m_RootOrder
