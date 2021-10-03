@@ -487,6 +487,7 @@ MonoBehaviour:
   speed: 6
   smoothTime: 0.1
   smoothVelocity: 2
+  currentSpeed: 0
 --- !u!54 &184615046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2122,7 +2123,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2443076, y: -0.0000000092645935, z: 7.6189124e-11, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.000000014128465, z: -0.0000000056234195, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -13.632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2445,7 +2446,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063886590}
-  m_LocalRotation: {x: 0.24077812, y: -0.0000000038365244, z: 9.517516e-10, w: 0.9705802}
+  m_LocalRotation: {x: 0.24077812, y: 0.000000025342338, z: -0.0000000062868377, w: 0.9705802}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
