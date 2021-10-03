@@ -13,14 +13,16 @@ public class AddInteractible : MonoBehaviour
     public GameObject interactDisplay;
 
     private GameObject interactionAreaObject;
+    [HideInInspector]
+    public InteractionArea interactionArea;
 
     public void AddToTarget()
     {
         Debug.Log(target);
         interactionAreaObject = Instantiate(interactionAreaPrefab, target);
-        var ina = interactionAreaObject.GetComponent<InteractionArea>();
-        ina.player = player;
-        ina.interactDisplay = interactDisplay;
+        interactionArea = interactionAreaObject.GetComponent<InteractionArea>();
+        interactionArea.player = player;
+        interactionArea.interactDisplay = interactDisplay;
     }
     public void RemoveFromTarget()
     {

@@ -5,7 +5,7 @@ public class InteractQuest : Quest
 {
     public int interactionAmount;
 
-    public DialogueInteraction interaction;
+    public Interaction interaction;
 
     public bool hasDialogue;
     [TextArea]
@@ -35,6 +35,6 @@ public class InteractQuest : Quest
         base.EndQuest();
 
         interaction.active = false;
-        interaction.dialogueBox.SetActive(false);
+        //interaction.dialogueBox.SetActive(false);
     }
 }

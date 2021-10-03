@@ -14,15 +14,23 @@ public class SwitchCamera : MonoBehaviour
     [HideInInspector]
     public GameObject victim;
 
+    public GameObject interactionArea;
+
     public void SwitchCam()
     {
         int npc = Random.Range(0, crowdManager.victimeList.Count);
         victim = crowdManager.victimeList[npc];
 
         cinemachineFreeLook.LookAt = victim.transform;
+
+        interactionArea.transform.SetParent(victim.transform);
+        interactionArea.transform.localPosition = Vector3.zero;
     }
     public void SwitchBackCam()
     {
         cinemachineFreeLook.LookAt = player;
+
+        interactionArea.transform.SetParent(null);
+        interactionArea.transform.localPosition = Vector3.forward * 200f;
     }
 }
