@@ -35,6 +35,9 @@ public abstract class Quest : MonoBehaviour
     [HideInInspector]
     public bool active;
 
+    [HideInInspector]
+    public ThirdPersonMovement movement;
+
     private void OnEnable()
     {
         QuestManager.allQuests.Add(this);
@@ -58,6 +61,8 @@ public abstract class Quest : MonoBehaviour
         patchPopup.gameObject.SetActive(true);
         patchPopup.SetMissionPopup(questName, description, leftSprite, rightSprite);
 
+        movement.locked = true;
+
         yield return new WaitForSeconds(waitTime);
 
         patchPopup.gameObject.SetActive(false);
@@ -65,6 +70,7 @@ public abstract class Quest : MonoBehaviour
         onStartQuest.Invoke();
 
         active = true;
+        movement.locked = false;
     }
 
     public abstract bool Completion();

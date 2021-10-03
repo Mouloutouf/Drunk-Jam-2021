@@ -33,6 +33,8 @@ public class QuestManager : MonoBehaviour
     public PatchPopup patchPopup;
     public float popupTime;
 
+    public ThirdPersonMovement movement;
+
     void Start()
     {
         currentQuest = SelectRandomQuest();
@@ -67,6 +69,8 @@ public class QuestManager : MonoBehaviour
         currentQuest.usePopup = usePopup;
         currentQuest.patchPopup = patchPopup;
         currentQuest.popupTime = popupTime;
+
+        currentQuest.movement = movement;
 
         currentQuest.StartQuest();
     }
@@ -103,6 +107,8 @@ public class QuestManager : MonoBehaviour
         previousQuest = currentQuest;
 
         currentQuest.EndQuest();
+
+        if (winState || loseState) return;
 
         currentQuest = SelectRandomQuest();
         StartCurrentQuest();

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
     public CharacterController characterController;
+
+    public CinemachineFreeLook freeLook;
 
     public Transform cameraTransform;
 
@@ -15,6 +18,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float currentSpeed;
 
+    public bool locked;
+
     private void Start()
     {
         currentSpeed = speed;
@@ -22,6 +27,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Update()
     {
+        if (locked) return;
+
         float horizontal = InputManager.instance.GetHorizontalMotion();
         float vertical = InputManager.instance.GetVerticalMotion();
 
