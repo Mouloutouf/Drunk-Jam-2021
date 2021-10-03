@@ -31,7 +31,7 @@ public class PatchPopup : MonoBehaviour
 
     public void SetMissionPopup(string missionName, string missionDescription, Sprite imageLeft, Sprite imageRight)
     {
-        missionDescText.text = missionName;
+        missionNameText.text = missionName;
         missionDescText.text = missionDescription;
 
         leftImage.sprite = imageLeft;

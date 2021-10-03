@@ -599,6 +599,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2099858898}
     - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: questFailed_FX
+      value: 
+      objectReference: {fileID: 4877767505363672323, guid: 643b3055a86ef5b4d925a02cd2d4e637, type: 3}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: winQuestsAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
+      propertyPath: questValidated_FX
+      value: 
+      objectReference: {fileID: 4877767505363672323, guid: aaa63e1eb0602144aad8776937ba3c81, type: 3}
+    - target: {fileID: 3709771864685989770, guid: 2f0b2d5eb4fb65c4a8e0df7d571452e7, type: 3}
       propertyPath: useSelectedQuests
       value: 0
       objectReference: {fileID: 0}
@@ -1100,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 401048211}
+  freeLook: {fileID: 0}
   cameraTransform: {fileID: 1144548408}
   speed: 8
   smoothTime: 0.1
@@ -1832,7 +1845,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837334024}
-  m_LocalRotation: {x: 0.25839263, y: 0.0000000033775, z: -9.0340013e-10, w: 0.96604}
+  m_LocalRotation: {x: 0.25839263, y: 0.0000000033775036, z: -9.03401e-10, w: 0.96604}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2232,7 +2245,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144548404}
-  m_LocalRotation: {x: 0.2443076, y: 0.0000000027986418, z: 0.0000000018693544, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.0000000027986418, z: 0.0000000018693538, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -17.532}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
