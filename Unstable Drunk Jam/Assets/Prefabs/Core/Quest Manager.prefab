@@ -112,13 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 6
+  completionTime: 7.5
   currentTime: 0
   questName: Inverted Keys!
-  description: 'Find the flag!
-
-    Oh, and the keys are inverted, sorry, devs are
-    working on that issue.'
+  description: Find the flag! Oh, and the keys are inverted, sorry, devs are working
+    on that issue.
   questSprite: {fileID: 0}
   text: {fileID: 0}
   onStartQuest:
@@ -230,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 10
+  completionTime: 11
   currentTime: 0
   questName: Bugged NPC
   description: A NPC bugged and is upside-down, find him!
@@ -435,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 5
+  completionTime: 8
   currentTime: 0
   questName: Chinese language added to the game
   description: "\u524D\u5F80\u76EE\u7684\u5730"
@@ -564,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 2
+  completionTime: 8
   currentTime: 0
   questName: Buy drink
   description: Hit the vending machine as much as possible, we need to know if the
@@ -637,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 10
+  completionTime: 12
   currentTime: 0
   questName: Camera might be bugged
   description: Find the NPC that has your camera!
@@ -910,7 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 4
+  completionTime: 7.5
   currentTime: 0
   questName: Flag
   description: Move to the flag as fast as possible!
@@ -1053,10 +1051,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 10
+  completionTime: 8
   currentTime: 0
   questName: Collisions
-  description: We need you to hit as many walls as possible to test the collisions!
+  description: We need you to hit as many obstacles as possible to test the collisions!
   questSprite: {fileID: 0}
   text: {fileID: 0}
   onStartQuest:
@@ -1194,6 +1192,10 @@ PrefabInstance:
       value: Go to flag! You might get some ads, as we changed to Free-To-Play recently.
       objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: completionTime
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: destinations.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -1228,6 +1230,14 @@ PrefabInstance:
     - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: spawnMinMax.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: timeMinMax.Array.data[0]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: timeMinMax.Array.data[1]
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: spawnMinMax.Array.data[0]
@@ -1377,7 +1387,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: description
-      value: Could you write an article for the game?
+      value: Could you give 5 stars and write an article for the game? Then join
+        the flag!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
+      propertyPath: completionTime
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: destinations.Array.size
@@ -1517,8 +1532,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874136001782808950, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
       propertyPath: description
-      value: The devs implemented a new secret feature, but they forgot on which
-        letter they binded it, could you please find it for them?
+      value: The devs implemented a new feature, but we forgot the key. Could you
+        please find it for them?
       objectReference: {fileID: 0}
     - target: {fileID: 8874136001782808951, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
       propertyPath: m_RootOrder
