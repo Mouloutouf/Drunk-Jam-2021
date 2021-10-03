@@ -10,6 +10,6 @@ public class KillVictimFeedback : MonoBehaviour
 
     public void KillVictim()
     {
-        Instantiate(killFeedbackPrefab, switchCamera.victim.transform.position, Quaternion.identity);
+        if (killFeedbackPrefab != null) Instantiate(killFeedbackPrefab, switchCamera.victim.transform.position, Quaternion.identity);
     }
 }

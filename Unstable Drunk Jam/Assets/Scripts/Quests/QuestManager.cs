@@ -29,10 +29,14 @@ public class QuestManager : MonoBehaviour
 
     private Quest previousQuest;
 
+    public bool usePopup;
+    public PatchPopup patchPopup;
+    public float popupTime;
+
     void Start()
     {
         currentQuest = SelectRandomQuest();
-        currentQuest.StartQuest();
+        StartCurrentQuest();
     }
 
     void Update()
@@ -56,6 +60,15 @@ public class QuestManager : MonoBehaviour
             NextQuest();
         }
         if (timerText != null) timerText.text = timeLeftString + " " + currentQuest.currentTime.ToString("F2");
+    }
+
+    void StartCurrentQuest()
+    {
+        currentQuest.usePopup = usePopup;
+        currentQuest.patchPopup = patchPopup;
+        currentQuest.popupTime = popupTime;
+
+        currentQuest.StartQuest();
     }
 
     Quest SelectRandomQuest()
@@ -92,6 +105,6 @@ public class QuestManager : MonoBehaviour
         currentQuest.EndQuest();
 
         currentQuest = SelectRandomQuest();
-        currentQuest.StartQuest();
+        StartCurrentQuest();
     }
 }
