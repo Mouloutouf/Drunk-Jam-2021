@@ -12,11 +12,19 @@ public class CollideKillQuest : Quest
     {
         base.StartQuest();
 
+        collisionKill.killActive = true;
         collisionKill.killCount = 0;
     }
 
     public override bool Completion()
     {
         return collisionKill.killCount >= killAmount;
+    }
+
+    public override void EndQuest()
+    {
+        collisionKill.killActive = false;
+
+        base.EndQuest();
     }
 }
