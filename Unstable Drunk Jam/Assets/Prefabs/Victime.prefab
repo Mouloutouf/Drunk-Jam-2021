@@ -315,6 +315,10 @@ MonoBehaviour:
   minMaxSpeed: {x: 0, y: 0}
   speedChangeOnDestination: 0
   speedVariation: 0
+  death_FX: {fileID: 4877767505363672323, guid: b894b6a7fe6df674594c953be384170c, type: 3}
+  damage_FX: {fileID: 4877767505363672323, guid: df6c25992eff09d408dca97fe50ae850, type: 3}
+  spawn_FX: {fileID: 4877767505363672323, guid: 514082ee4453cff468cbf0a8aebc8fba, type: 3}
+  animator: {fileID: 0}
 --- !u!195 &2685189884591222320
 NavMeshAgent:
   m_ObjectHideFlags: 0

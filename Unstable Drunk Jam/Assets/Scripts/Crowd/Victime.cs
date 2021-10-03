@@ -47,7 +47,6 @@ public class Victime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spawn();
         //minMaxSpeed = new Vector2(2, 6);
         agent = GetComponent<NavMeshAgent>();
 
@@ -83,8 +82,6 @@ public class Victime : MonoBehaviour
         {
             animator.SetFloat("RunSpeed", velocity * 10);
         }
-
-        Debug.LogWarning("velocity = " + velocity);
     }
 
     void SelectNewDestination()
