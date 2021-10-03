@@ -16,10 +16,14 @@ public class CollisionCheck : MonoBehaviour
     public UnityEvent onCollisionEnter;
     public UnityEvent onCollisionExit;
 
+    [Header("FX")]
+    public GameObject collision_FX;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (layerMask == (layerMask | (1 << collision.gameObject.layer)))
         {
+            CollisionFX(collision.transform.position);
             Debug.Log("collision");
             colliding = true;
             collisionCount++;
@@ -32,5 +36,10 @@ public class CollisionCheck : MonoBehaviour
         colliding = false;
 
         onCollisionExit.Invoke();
+    }
+
+    void CollisionFX(Vector3 position)
+    {
+        Instantiate(collision_FX, position, Quaternion.identity);
     }
 }
