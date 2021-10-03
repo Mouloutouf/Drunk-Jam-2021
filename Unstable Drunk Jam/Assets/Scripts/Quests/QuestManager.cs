@@ -29,14 +29,15 @@ public class QuestManager : MonoBehaviour
 
     private Quest previousQuest;
 
-    [Header("FX")]
+    public bool usePopup;
+    public PatchPopup patchPopup;
+    public float popupTime;
+	[Header("FX")]
     public GameObject questFailed_FX;
-    public GameObject questValidated_FX;
-
-    void Start()
+    public GameObject questValidated_FX;    void Start()
     {
         currentQuest = SelectRandomQuest();
-        currentQuest.StartQuest();
+        StartCurrentQuest();
     }
 
     void Update()
@@ -62,6 +63,15 @@ public class QuestManager : MonoBehaviour
             NextQuest();
         }
         if (timerText != null) timerText.text = timeLeftString + " " + currentQuest.currentTime.ToString("F2");
+    }
+
+    void StartCurrentQuest()
+    {
+        currentQuest.usePopup = usePopup;
+        currentQuest.patchPopup = patchPopup;
+        currentQuest.popupTime = popupTime;
+
+        currentQuest.StartQuest();
     }
 
     Quest SelectRandomQuest()
@@ -98,7 +108,7 @@ public class QuestManager : MonoBehaviour
         currentQuest.EndQuest();
 
         currentQuest = SelectRandomQuest();
-        currentQuest.StartQuest();
+        StartCurrentQuest();
     }
 
     //////FX

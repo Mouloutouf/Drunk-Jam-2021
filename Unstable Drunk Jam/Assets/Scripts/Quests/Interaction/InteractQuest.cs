@@ -7,16 +7,6 @@ public class InteractQuest : Quest
 
     public Interaction interaction;
 
-    public bool hasDialogue;
-    [TextArea]
-    public string dialogueString;
-    public TextMeshProUGUI dialogueText;
-
-    private void Start()
-    {
-        dialogueText.text = dialogueString;
-    }
-
     public override void StartQuest()
     {
         base.StartQuest();
@@ -35,6 +25,5 @@ public class InteractQuest : Quest
         base.EndQuest();
 
         interaction.active = false;
-        //interaction.dialogueBox.SetActive(false);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionKill : MonoBehaviour
 {
+    public CrowdManager crowdManager;
+
     [HideInInspector]
     public bool killActive;
     [HideInInspector]
@@ -21,7 +23,8 @@ public class CollisionKill : MonoBehaviour
         {
             killCount++;
 
-            Instantiate(killFeedbackPrefab, collision.transform.position, Quaternion.identity);
+            if (killFeedbackPrefab != null) Instantiate(killFeedbackPrefab, collision.transform.position, Quaternion.identity);
+            crowdManager.victimeList.Remove(collision.gameObject);
             Destroy(collision.gameObject);
 
             // Respawn a new victim
