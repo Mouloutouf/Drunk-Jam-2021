@@ -32,9 +32,12 @@ public class QuestManager : MonoBehaviour
     public bool usePopup;
     public PatchPopup patchPopup;
     public float popupTime;
+
 	[Header("FX")]
     public GameObject questFailed_FX;
-    public GameObject questValidated_FX;    void Start()
+    public GameObject questValidated_FX;
+
+    void Start()
     {
         currentQuest = SelectRandomQuest();
         StartCurrentQuest();
