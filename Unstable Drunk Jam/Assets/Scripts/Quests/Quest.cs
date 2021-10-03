@@ -23,6 +23,15 @@ public abstract class Quest : MonoBehaviour
     public UnityEvent onLoseQuest;
     public UnityEvent onEndQuest;
 
+    private void OnEnable()
+    {
+        QuestManager.allQuests.Add(this);
+    }
+    private void OnDisable()
+    {
+        QuestManager.allQuests.Remove(this);
+    }
+
     public virtual void StartQuest()
     {
         currentTime = completionTime;

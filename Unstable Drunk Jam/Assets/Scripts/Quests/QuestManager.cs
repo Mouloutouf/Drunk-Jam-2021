@@ -12,7 +12,9 @@ public class QuestManager : MonoBehaviour
 
     public GameObject winBox, loseBox;
 
-    public List<Quest> allQuests;
+    public bool useSelectedQuests;
+    public List<Quest> selectedQuests;
+    public static List<Quest> allQuests = new List<Quest>();
 
     private List<Quest> quests = new List<Quest>();
     private Quest currentQuest;
@@ -56,7 +58,8 @@ public class QuestManager : MonoBehaviour
 
     Quest SelectRandomQuest()
     {
-        foreach (var q in allQuests)
+        var qList = useSelectedQuests ? selectedQuests : allQuests;
+        foreach (var q in qList)
         {
             if (q == previousQuest) continue;
             quests.Add(q);
