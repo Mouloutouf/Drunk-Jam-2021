@@ -211,9 +211,6 @@ MonoBehaviour:
   active: 0
   interactionAmount: 1
   interaction: {fileID: 6677463835183731177}
-  hasDialogue: 0
-  dialogueString: 
-  dialogueText: {fileID: 0}
 --- !u!114 &821820613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,9 +521,6 @@ MonoBehaviour:
   active: 0
   interactionAmount: 1
   interaction: {fileID: 8057181770153985262}
-  hasDialogue: 0
-  dialogueString: 
-  dialogueText: {fileID: 0}
 --- !u!114 &1907963317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,8 +598,8 @@ MonoBehaviour:
   completed: 0
   completionTime: 10
   currentTime: 0
-  questName: 
-  description: 
+  questName: Kill
+  description: We are now making a violent game. Kill 10 villagers.
   questSprite: {fileID: 0}
   text: {fileID: 0}
   onStartQuest:
@@ -691,9 +685,9 @@ MonoBehaviour:
   timerText: {fileID: 0}
   patchVersion: Version 1.12.
   patchText: {fileID: 0}
-  usePopup: 0
+  usePopup: 1
   patchPopup: {fileID: 0}
-  popupTime: 2
+  popupTime: 3
 --- !u!1 &3709771865849610624
 GameObject:
   m_ObjectHideFlags: 0
