@@ -491,6 +491,7 @@ MonoBehaviour:
   speed: 6
   smoothTime: 0.1
   smoothVelocity: 2
+  currentSpeed: 0
 --- !u!54 &184615046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2120,7 +2121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2443076, y: 0.000000026464402, z: -0.000000004287492, w: 0.96969783}
+  m_LocalRotation: {x: 0.2443076, y: 0.000000014128465, z: -0.0000000056234195, w: 0.96969783}
   m_LocalPosition: {x: 0, y: 8.104401, z: -13.632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

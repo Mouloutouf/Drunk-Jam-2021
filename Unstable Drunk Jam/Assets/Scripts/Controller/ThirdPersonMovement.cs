@@ -13,7 +13,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float smoothTime;
     public float smoothVelocity;
 
-    private float currentSpeed;
+    public float currentSpeed;
 
     private void Start()
     {
