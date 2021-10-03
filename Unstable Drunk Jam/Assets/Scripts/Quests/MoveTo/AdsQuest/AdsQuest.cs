@@ -43,6 +43,8 @@ public class AdsQuest : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         adClone = Instantiate(ads[Random.Range(0, ads.Length)], canvas);
+        adClone.GetComponent<AdBehaviour>().OpenAdFX();
+
         adClone.transform.position = new Vector2(Random.Range(0, spawnMinMax[0]), Random.Range(0, spawnMinMax[1]));
         currentAds.Add(adClone);
         ShowNewAd();

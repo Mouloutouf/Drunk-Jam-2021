@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.1, y: 25.7}
+  m_AnchoredPosition: {x: -7.1, y: -18.5}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8521662139885745278
@@ -236,7 +236,7 @@ RectTransform:
   m_GameObject: {fileID: 4969178753155098348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.69769, z: 1}
   m_Children: []
   m_Father: {fileID: 9045730089211981794}
   m_RootOrder: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 396003c9866e5454f9181898336f8003, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 060bf31283ed2434389166f341eb247b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -418,3 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45b356f467f47240a1c91bd7da31843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleSpeed: 12
+  delete_FX: {fileID: 1002942088740506701, guid: eba1cb1ac6b24774c8abdd5ca830d1c6, type: 3}
+  spawn_FX: {fileID: 8644615177560702014, guid: 7ea41b050098ca942865f3da4ff7dd92, type: 3}
