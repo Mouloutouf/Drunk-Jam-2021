@@ -50,7 +50,8 @@ MonoBehaviour:
   questName: Inverted Keys!
   description: Find the flag! Oh, and the keys are inverted, sorry, devs are working
     on that issue.
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: c8ccfc3defc3d004ca8690d88e2d3c26, type: 3}
+  rightSprite: {fileID: 21300000, guid: 9c7beefd754148045a98cd736e418ce2, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -100,7 +101,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!114 &632308872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +168,8 @@ MonoBehaviour:
   currentTime: 0
   questName: Bugged NPC
   description: A NPC bugged and is upside-down, find him!
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: 9b57ca61c3580a14495978e4a0ae7431, type: 3}
+  rightSprite: {fileID: 21300000, guid: 9b57ca61c3580a14495978e4a0ae7431, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -274,7 +276,8 @@ MonoBehaviour:
   currentTime: 0
   questName: Chinese language added to the game
   description: "\u524D\u5F80\u76EE\u7684\u5730"
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: e09d969e3ac08e34fa34f7cb9ab8cc00, type: 3}
+  rightSprite: {fileID: 21300000, guid: 9c7beefd754148045a98cd736e418ce2, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -324,7 +327,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!114 &1408706147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +394,8 @@ MonoBehaviour:
   questName: Buy drink
   description: Hit the vending machine as much as possible, we need to know if the
     players can buy a drink. Thanks!
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: b95013c26db232942b108b6abf9a281d, type: 3}
+  rightSprite: {fileID: 21300000, guid: 5483269677949cf49b0eb26063c0a8c5, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -465,7 +469,8 @@ MonoBehaviour:
   currentTime: 0
   questName: Camera might be bugged
   description: Find the NPC that has your camera!
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: eee429f9bf10c554ea3f1f4594b1ab7b, type: 3}
+  rightSprite: {fileID: 21300000, guid: eee429f9bf10c554ea3f1f4594b1ab7b, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -568,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1928865791
 Transform:
   m_ObjectHideFlags: 0
@@ -678,9 +683,10 @@ MonoBehaviour:
   loseQuestsAmount: 5
   winBox: {fileID: 0}
   loseBox: {fileID: 0}
-  useSelectedQuests: 0
+  useSelectedQuests: 1
   selectedQuests:
   - {fileID: 8459940589997022621}
+  - {fileID: 1907963318}
   timeLeftString: 'New patch in:'
   timerText: {fileID: 0}
   patchVersion: Version 1.12.
@@ -736,7 +742,8 @@ MonoBehaviour:
   currentTime: 0
   questName: Flag
   description: Move to the flag as fast as possible!
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: 8de212865ed3641499e4ae0d89c915b4, type: 3}
+  rightSprite: {fileID: 21300000, guid: 9c7beefd754148045a98cd736e418ce2, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -762,7 +769,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!1 &3709771866490421647
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +818,8 @@ MonoBehaviour:
   currentTime: 0
   questName: Collisions
   description: We need you to hit as many obstacles as possible to test the collisions!
-  questSprite: {fileID: 0}
+  leftSprite: {fileID: 21300000, guid: 5483269677949cf49b0eb26063c0a8c5, type: 3}
+  rightSprite: {fileID: 21300000, guid: 5483269677949cf49b0eb26063c0a8c5, type: 3}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -942,6 +950,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: popupTime
       value: 1
       objectReference: {fileID: 0}
@@ -950,9 +962,17 @@ PrefabInstance:
       value: F2P experience
       objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: leftSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f72a0b379dc528b4898498fa1b03fee0, type: 3}
+    - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: description
       value: Go to flag! You might get some ads, as we changed to Free-To-Play recently.
       objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: rightSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c7beefd754148045a98cd736e418ce2, type: 3}
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: completionTime
       value: 9
@@ -1144,6 +1164,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: popupTime
       value: 1
       objectReference: {fileID: 0}
@@ -1152,10 +1176,18 @@ PrefabInstance:
       value: We need more positive reviews
       objectReference: {fileID: 0}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
+      propertyPath: leftSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71a5ebfc18f383f478b95e5b5320e2e1, type: 3}
+    - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: description
       value: Could you give 5 stars and write an article for the game? Then join
         the flag!!!
       objectReference: {fileID: 0}
+    - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
+      propertyPath: rightSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c7beefd754148045a98cd736e418ce2, type: 3}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: completionTime
       value: 12
@@ -1301,10 +1333,18 @@ PrefabInstance:
       value: New feature
       objectReference: {fileID: 0}
     - target: {fileID: 8874136001782808950, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
+      propertyPath: leftSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84e0827850202eb40bb2dca108004be2, type: 3}
+    - target: {fileID: 8874136001782808950, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
       propertyPath: description
       value: The devs implemented a new feature, but we forgot the key. Could you
         please find it for them?
       objectReference: {fileID: 0}
+    - target: {fileID: 8874136001782808950, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
+      propertyPath: rightSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84e0827850202eb40bb2dca108004be2, type: 3}
     - target: {fileID: 8874136001782808951, guid: 545c9e4dbaaa79849b45d9550e08c48b, type: 3}
       propertyPath: m_RootOrder
       value: 9
