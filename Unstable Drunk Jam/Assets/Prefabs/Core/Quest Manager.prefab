@@ -101,7 +101,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!114 &632308872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!114 &1408706147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,10 +603,9 @@ MonoBehaviour:
   completed: 0
   completionTime: 10
   currentTime: 0
-  questName: 
-  description: 
-  leftSprite: {fileID: 0}
-  rightSprite: {fileID: 0}
+  questName: Kill
+  description: We are now making a violent game. Kill 10 villagers.
+  questSprite: {fileID: 0}
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
@@ -692,9 +691,9 @@ MonoBehaviour:
   timerText: {fileID: 0}
   patchVersion: Version 1.12.
   patchText: {fileID: 0}
-  usePopup: 0
+  usePopup: 1
   patchPopup: {fileID: 0}
-  popupTime: 2
+  popupTime: 3
 --- !u!1 &3709771865849610624
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +769,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.75
+  radius: 1
 --- !u!1 &3709771866490421647
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: radius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404288, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: popupTime
@@ -1159,6 +1162,10 @@ PrefabInstance:
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
+      propertyPath: radius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1872335093369051131, guid: 87d3d33b4ba37e448b50bf9b10e31f1c, type: 3}
       propertyPath: popupTime
