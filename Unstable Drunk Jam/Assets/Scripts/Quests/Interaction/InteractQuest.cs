@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class ChineseInteractQuest : Quest
+public class InteractQuest : Quest
 {
     public int interactionAmount;
 
-    public DialogueInteraction interaction;
+    public Interaction interaction;
 
+    public bool hasDialogue;
     [TextArea]
     public string dialogueString;
     public TextMeshProUGUI dialogueText;
@@ -34,6 +35,6 @@ public class ChineseInteractQuest : Quest
         base.EndQuest();
 
         interaction.active = false;
-        interaction.dialogueBox.SetActive(false);
+        //interaction.dialogueBox.SetActive(false);
     }
 }
