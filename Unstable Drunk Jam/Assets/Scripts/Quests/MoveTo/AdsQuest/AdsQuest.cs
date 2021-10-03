@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdsQuest : MonoBehaviour
 {
-    public CursorHide cursor;
+    //public CursorHide cursor;
 
     public Transform canvas;
 
@@ -18,7 +18,7 @@ public class AdsQuest : MonoBehaviour
 
     public void ShowFirstAd()
     {
-        cursor.enabled = false;
+        //cursor.enabled = false;
         ShowNewAd();
     }
 
@@ -30,7 +30,7 @@ public class AdsQuest : MonoBehaviour
 
     public void StopAds()
     {
-        cursor.enabled = true;
+        //cursor.enabled = true;
         foreach (var ad in currentAds)
         {
             Destroy(ad);
@@ -45,7 +45,7 @@ public class AdsQuest : MonoBehaviour
         adClone = Instantiate(ads[Random.Range(0, ads.Length)], canvas);
         adClone.GetComponent<AdBehaviour>().OpenAdFX();
 
-        adClone.transform.position = new Vector2(Random.Range(0, spawnMinMax[0]), Random.Range(0, spawnMinMax[1]));
+        adClone.transform.position = new Vector2(Random.Range(spawnMinMax[0], spawnMinMax[1]), Random.Range(spawnMinMax[2], spawnMinMax[3]));
         currentAds.Add(adClone);
         ShowNewAd();
     }

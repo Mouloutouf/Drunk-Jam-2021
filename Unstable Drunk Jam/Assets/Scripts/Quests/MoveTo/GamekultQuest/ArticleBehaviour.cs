@@ -17,10 +17,6 @@ public class ArticleBehaviour : MonoBehaviour
     public int starsCompletion;
     public int articleCompletion;
 
-    [Header("FX")]
-    public GameObject star_FX;
-    public GameObject type_FX;
-
     private void Start()
     {
         quest = FindObjectOfType<GamekultQuest>();
@@ -28,12 +24,10 @@ public class ArticleBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (starsCompletion >= 5)
+        if (starsCompletion == 4)
         {
             if (Input.anyKeyDown)
             {
-                TypeFX();
-
                 reviewText.text = reviewText.text + articleWords[articleCompletion];
                 articleCompletion++;
 
@@ -45,26 +39,9 @@ public class ArticleBehaviour : MonoBehaviour
 
     public void StarClicked()
     {
-        starsCompletion++;
+        stars[starsCompletion].color = starsOkColor;
 
-        if (starsCompletion <= 5 )
-        {
-            stars[starsCompletion-1].color = starsOkColor;
-            stars[starsCompletion - 1].transform.localScale *= 1.5f;
-            StarFX();
-
-        }
-    }
-
-
-    /////FX
-    ///
-    void StarFX()
-    {
-        if(star_FX != null) Instantiate(star_FX);
-    }
-    void TypeFX()
-    {
-        if (type_FX != null) Instantiate(type_FX);
+        if (starsCompletion < 4)
+            starsCompletion++;
     }
 }
