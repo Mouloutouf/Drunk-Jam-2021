@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 2685189884591222320}
   m_Layer: 6
   m_Name: Victime
-  m_TagString: Untagged
+  m_TagString: Victime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,6 +310,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementRange: 50
+  agent: {fileID: 0}
+  stopMaxTime: 0
+  minMaxSpeed: {x: 0, y: 0}
+  speedChangeOnDestination: 0
   speedVariation: 0
 --- !u!195 &2685189884591222320
 NavMeshAgent:

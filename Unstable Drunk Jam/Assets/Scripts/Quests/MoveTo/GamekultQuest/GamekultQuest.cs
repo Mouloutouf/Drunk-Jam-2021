@@ -7,7 +7,7 @@ public class GamekultQuest : MonoBehaviour
 {
     public Transform canvas;
     public ThirdPersonMovement player;
-    public CursorHide cursor;
+    //public CursorHide cursor;
 
     public GameObject articlePrefab;
 
@@ -15,14 +15,14 @@ public class GamekultQuest : MonoBehaviour
 
     public void ShowArticle()
     {
-        cursor.enabled = false;
+        //cursor.enabled = false;
         articleClone = Instantiate(articlePrefab, canvas);
         player.currentSpeed = 0;
     }
 
     public void ArticleDown()
     {
-        cursor.enabled = true;
+        //cursor.enabled = true;
         Destroy(articleClone);
         player.currentSpeed = player.speed;
     }

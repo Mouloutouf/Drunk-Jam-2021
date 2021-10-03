@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1872335093369051128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872335093369051129}
+  - component: {fileID: 1872335093369051131}
+  - component: {fileID: 1872335093369051130}
+  m_Layer: 0
+  m_Name: Gamekult Quest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872335093369051129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872335093369051128}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872335093369051131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872335093369051128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32ef25a932707f4b96564ca8c65c4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completed: 0
+  completionTime: 10
+  currentTime: 0
+  description: Write an article for the game!
+  text: {fileID: 0}
+  onStartQuest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1872335093369051130}
+        m_TargetAssemblyTypeName: GamekultQuest, Assembly-CSharp
+        m_MethodName: ShowArticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onWinQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoseQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  onEndQuest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1872335093369051130}
+        m_TargetAssemblyTypeName: GamekultQuest, Assembly-CSharp
+        m_MethodName: ArticleDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destination: {fileID: 0}
+  player: {fileID: 0}
+  radius: 0.5
+--- !u!114 &1872335093369051130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872335093369051128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1ab2df42fe3d14fa8d5cc5e720c849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  player: {fileID: 0}
+  cursor: {fileID: 0}
+  articlePrefab: {fileID: 4523977052143478274, guid: ab9217ee8fa7290409aeaef5a9b0fbf0, type: 3}
