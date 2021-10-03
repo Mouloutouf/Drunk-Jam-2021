@@ -418,3 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45b356f467f47240a1c91bd7da31843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleSpeed: 12
+  delete_FX: {fileID: 1002942088740506701, guid: eba1cb1ac6b24774c8abdd5ca830d1c6, type: 3}
+  spawn_FX: {fileID: 4475440043375968716, guid: 60ac0292172098b47971b35cf96e9cca, type: 3}
