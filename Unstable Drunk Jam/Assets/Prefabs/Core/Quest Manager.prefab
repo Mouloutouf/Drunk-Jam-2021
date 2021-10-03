@@ -1082,6 +1082,26 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: spawnMinMax.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: spawnMinMax.Array.data[0]
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: spawnMinMax.Array.data[1]
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: spawnMinMax.Array.data[2]
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307804717324404289, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
+      propertyPath: spawnMinMax.Array.data[3]
+      value: 850
+      objectReference: {fileID: 0}
     - target: {fileID: 6307804717324404290, guid: d4722e09db9fae042997a62afa0e58af, type: 3}
       propertyPath: m_RootOrder
       value: 9
