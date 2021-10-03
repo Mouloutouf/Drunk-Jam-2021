@@ -21,6 +21,11 @@ public class Victime : MonoBehaviour
 
     private bool moving = false;
 
+    [Header("FX")]
+    public GameObject death_FX;
+    public GameObject damage_FX;
+    public GameObject spawn_FX;
+
     // GETTERS & SETTERS
     public void SetupVictim(float pathP, int maxRange, float stopT, Vector2 mmSpeed, bool speedChange, bool speedV)
     {
@@ -36,6 +41,7 @@ public class Victime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Spawn();
         //minMaxSpeed = new Vector2(2, 6);
         agent = GetComponent<NavMeshAgent>();
 
@@ -76,5 +82,53 @@ public class Victime : MonoBehaviour
         moving = false;
         yield return new WaitForSeconds(rngTime);
         SelectNewDestination();
+    }
+
+    void Spawn()
+    {
+        SpawnFX();
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        DamageFX();
+
+        if(health <= 0)
+        {
+            StartCoroutine(Death());
+        }
+    }
+
+    IEnumerator Death()
+    {
+        DeathFX();
+        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
+    }
+
+    ///// FX
+    ///
+
+    public void SpawnFX()
+    {
+        if (spawn_FX != null)
+        {
+            Instantiate(spawn_FX, transform.position, Quaternion.identity);
+        }
+    }
+    public void DamageFX()
+    {
+        if (damage_FX != null)
+        {
+            Instantiate(damage_FX, transform.position, Quaternion.identity);
+        }
+    }
+    public void DeathFX()
+    {
+        if (death_FX != null)
+        {
+            Instantiate(death_FX, transform.position, Quaternion.identity);
+        }
     }
 }
