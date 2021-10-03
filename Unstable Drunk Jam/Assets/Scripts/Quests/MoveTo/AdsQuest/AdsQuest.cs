@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdsQuest : MonoBehaviour
 {
-    public CursorHide cursor;
+    //public CursorHide cursor;
 
     public Transform canvas;
 
@@ -18,7 +18,7 @@ public class AdsQuest : MonoBehaviour
 
     public void ShowFirstAd()
     {
-        cursor.enabled = false;
+        //cursor.enabled = false;
         ShowNewAd();
     }
 
@@ -30,7 +30,7 @@ public class AdsQuest : MonoBehaviour
 
     public void StopAds()
     {
-        cursor.enabled = true;
+        //cursor.enabled = true;
         foreach (var ad in currentAds)
         {
             Destroy(ad);

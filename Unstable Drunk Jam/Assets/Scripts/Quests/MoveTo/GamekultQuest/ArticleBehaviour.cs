@@ -28,8 +28,6 @@ public class ArticleBehaviour : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                Debug.Log("yeet");
-
                 reviewText.text = reviewText.text + articleWords[articleCompletion];
                 articleCompletion++;
 
