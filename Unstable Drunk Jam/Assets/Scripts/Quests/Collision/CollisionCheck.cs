@@ -23,7 +23,9 @@ public class CollisionCheck : MonoBehaviour
     {
         if (layerMask == (layerMask | (1 << collision.gameObject.layer)))
         {
-            CollisionFX(collision.transform.position);
+            var c = collision.GetContact(0);
+            CollisionFX(c.point);
+
             Debug.Log("collision");
             colliding = true;
             collisionCount++;
