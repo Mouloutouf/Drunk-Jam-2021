@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 4
+  completionTime: 6
   currentTime: 0
   description: 'Go to the Blue Pylon as fast as possible !
 
@@ -151,9 +151,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  destinations: []
+  destinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.5
+  radius: 0.75
 --- !u!114 &632308872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408706145}
   - component: {fileID: 1408706146}
+  - component: {fileID: 1408706147}
   m_Layer: 0
   m_Name: Move To Chinese Quest
   m_TagString: Untagged
@@ -415,13 +422,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 2
+  completionTime: 5
   currentTime: 0
   description: "\u524D\u5F80\u76EE\u7684\u5730"
   text: {fileID: 0}
   onStartQuest:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1408706147}
+        m_TargetAssemblyTypeName: ChangeTextToChinese, Assembly-CSharp
+        m_MethodName: ChinizeText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onWinQuest:
     m_PersistentCalls:
       m_Calls: []
@@ -430,10 +449,44 @@ MonoBehaviour:
       m_Calls: []
   onEndQuest:
     m_PersistentCalls:
-      m_Calls: []
-  destinations: []
+      m_Calls:
+      - m_Target: {fileID: 1408706147}
+        m_TargetAssemblyTypeName: ChangeTextToChinese, Assembly-CSharp
+        m_MethodName: NormalText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.5
+  radius: 0.75
+--- !u!114 &1408706147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408706144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc50ed95f75a7944abae47fd22b8935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chineseFont: {fileID: 11400000, guid: b776461d7e7b6234c984b123b64f4302, type: 2}
+  normalFont: {fileID: 11400000, guid: f069208f8f583d941bce6757149197b0, type: 2}
+  descriptionText: {fileID: 0}
+  chineseMessage: "\u63A5\u6211"
 --- !u!1 &1710753790
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,10 +717,13 @@ MonoBehaviour:
   winBox: {fileID: 0}
   loseBox: {fileID: 0}
   useSelectedQuests: 0
-  selectedQuests: []
-  timeLeftString: 'Time Left :'
+  selectedQuests:
+  - {fileID: 1408706146}
+  - {fileID: 3709771865849610625}
+  - {fileID: 632308873}
+  timeLeftString: 'New patch in :'
   timerText: {fileID: 0}
-  patchVersion: 
+  patchVersion: Version 1.12.
   patchText: {fileID: 0}
 --- !u!1 &3709771865849610624
 GameObject:
@@ -713,7 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completed: 0
-  completionTime: 2
+  completionTime: 4
   currentTime: 0
   description: Go to the Blue Pylon as fast as possible !
   text: {fileID: 0}
@@ -729,9 +785,15 @@ MonoBehaviour:
   onEndQuest:
     m_PersistentCalls:
       m_Calls: []
-  destinations: []
+  destinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   player: {fileID: 0}
-  radius: 0.5
+  radius: 0.75
 --- !u!1 &3709771865978353929
 GameObject:
   m_ObjectHideFlags: 0
