@@ -17,7 +17,8 @@ public abstract class Quest : MonoBehaviour
     [TextArea]
     public string description;
 
-    public Sprite questSprite;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
 
     public TextMeshProUGUI text;
 
@@ -55,7 +56,7 @@ public abstract class Quest : MonoBehaviour
     IEnumerator StartPopup()
     {
         patchPopup.gameObject.SetActive(true);
-        patchPopup.SetMissionPopup(questName, description, questSprite, questSprite);
+        patchPopup.SetMissionPopup(questName, description, leftSprite, rightSprite);
 
         yield return new WaitForSeconds(waitTime);
 
